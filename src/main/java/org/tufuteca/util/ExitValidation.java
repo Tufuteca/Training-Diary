@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class ExitValidation {
 
+    private MenuHandler menuHandler = new MenuHandler();
+
     public void exitFromAccount(Scanner scanner, String userRole) {
-        MenuHandler menuHandler = new MenuHandler();
         InputValidation inputValidation = new InputValidation();
         System.out.println("Вы уверены что хотите выйти?");
         System.out.println("1. Да");
@@ -25,13 +26,12 @@ public class ExitValidation {
                 }
             default:
                 System.out.println("Такого пункта меню нет. Выберите снова");
-                exitFromAccount();
+                exitFromAccount(scanner);
         }
     }
 
 
         public void exitFromApplication(Scanner scanner){
-            MenuHandler menuHandler = new MenuHandler();
             InputValidation inputValidation = new InputValidation();
             System.out.println("Вы уверены что хотите выйти?");
             System.out.println("1. Да");
@@ -43,7 +43,7 @@ public class ExitValidation {
                     menuHandler.authOrRegMenuHandler();
                 default:
                     System.out.println("Такого пункта меню нет. Выберите снова");
-                    exitFromApplication();
+                    exitFromApplication(scanner);
             }
     }
 
