@@ -8,8 +8,8 @@ public class MenuView {
         System.out.println("2. Регистрация");
         System.out.println("3. Выход");
     }
-    public void diplayUserMenu(String fullname){
-        System.out.println("Добро пожаловать: " +fullname);
+    public void diplayUserMenu(){
+        System.out.println("Добро пожаловать: ");
         System.out.println("1. Добавить тренировку");
         System.out.println("2. Изменить тренировку");
         System.out.println("3. Удалить тренировку");
